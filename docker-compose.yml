@@ -1,0 +1,13 @@
+version: "2.2"
+services:
+    bazad:
+        restart: always
+        build: .
+        ports:
+            - 0.0.0.0:11753:11753 # p2p
+            - 127.0.0.1:11754:11754 # rpc
+        volumes:
+            - ./baza-data:/data
+        # If you need block explorer API access (like for getblocks, gettransactionpool, etc.)
+        # in RPC api uncomment following line
+        # command: ["--enable-blockexplorer"]

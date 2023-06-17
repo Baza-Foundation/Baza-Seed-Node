@@ -1,0 +1,9 @@
+[Unit]
+Description=Baza Daemon
+After=network.target
+
+[Service]
+ExecStart=/path/to/bazad --log-file /path/to/bazad.log --data-dir /path/to/.Baza
+
+[Install]
+WantedBy=multi-user.target
